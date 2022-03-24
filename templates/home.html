@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UzNews</title>
+	<link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css">
+</head>
+<body>
+	<h2 style="color:deepskyblue; text-align:center";class="ui header">UzNews Yangiliklar olami</h2>
+	<h2 style="color:darkorange; text-align:left;";class="ui header">Kun Yangiliklar</h2>
+	<ul>
+		{% for post in object_list %}
+			<li><h2 style="color:blue">{{ post.title }}</h2></li>{{ post.text }}<br>
+		{% endfor %}
+	</ul>
+</body>
+</html>
